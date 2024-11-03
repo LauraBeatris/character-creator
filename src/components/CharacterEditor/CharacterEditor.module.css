@@ -1,13 +1,20 @@
+* {
+  ---character-editor-padding-top: 128px;
+}
+
 .characterEditor {
-  padding-top: 128px;
+  padding-top: var(---character-editor-padding-top);
   padding-bottom: 64px;
+  position: relative;
 }
 
 .maxWidthWrapper {
+  width: 100%;
 }
 
 .header {
   padding-bottom: 64px;
+  width: 65%;
 }
 
 .title {
@@ -24,7 +31,22 @@
 }
 
 .characterWrapper {
+  position: fixed;
+  min-height: 500px;
+  width: 500px;
+  top: var(---character-editor-padding-top);
+  right: 0;
 }
 
 .controlColumn {
+  width: 50%;
+}
+
+.perspectiveBar {
+  background-color: hsl(195deg, 20%, 86%);
+  width: 100%;
+  height: 300px;
+  position: sticky;
+  bottom: 0;
+  z-index: -10;
 }
